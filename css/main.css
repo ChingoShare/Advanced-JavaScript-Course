@@ -1,0 +1,26 @@
+header {
+	background-color: blue;
+	padding: 10px;
+}
+button {
+	color: darkblue;
+	display: block;
+	padding: 0 1em;
+	font-size: 1.5em;
+	margin-left: auto;
+}
+.products {
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-evenly;
+}
+.product-item {
+	box-shadow: inset 0 0 10px 5px darkblue;
+	border: solid 1px darkblue;
+	width: 200px;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+}
