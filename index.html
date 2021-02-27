@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.change-text {
+			font-family: sans-serif;
+			font-size: 1em;
+			color: white;
+			background-color: rgb(45, 56, 56);
+		}
+
+		.change-btn {
+			font-size: 1em;
+		}
+
+		form {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			margin-top: 30px;
+		}
+
+		label {
+			padding: 10px;
+		}
+
+		.error {
+			top: -1em;
+			position: absolute;
+			display: none;
+			color: red;
+		}
+	</style>
+</head>
+
+<body>
+	<p class="change-text"></p>
+	<button class="change-btn">Смена апострофов и ковычкек</button>
+	<form action="#">
+		<span class="error">*провертьте правильность заполнения!</span>
+		<label>Имя: <input class="name" type="text" placeholder="Только буквы"></label>
+		<label>Телефон: <input class="tel" type="tel" placeholder="Вид: +7(000)000-0000"></label>
+		<label>Email: <input class="email" type="email" placeholder="E-mail"></label>
+		<label>Текст: <textarea class="text"></textarea></label>
+		<button class="submit" type="submit">Отправить</button>
+	</form>
+	<script>
+		// Сменить одиночные ковычки на двойные
+		let text = `
+			One: 'Hi Mary.'
+			Two: 'Oh, hi.'
+			One: 'How are you doing?'
+			Two: 'I'm doing alright. How about you?'
+			One: 'Not too bad. The weather is great isn't it?'
+			Two: 'Yes. It's absolutely beautiful today.'
+			One: 'I wish it was like this more frequently.'
+			Two: 'Me too.'
+			One: 'So where are you going now?'
+			Two: 'I'm going to meet a friend of mine at the department store.'
+			One: 'Going to do a little shopping?'
+			Two: 'Yeah, I have to buy some presents for my parents.'
+			One: 'What's the occasion?'
+			Two: 'It's their anniversary.'
+			One: 'That's great. Well, you better get going. You don't want to be late.'
+			Two: 'I'll see you next time.'
+			One: 'Sure. Bye.'
+			`
+		text = text.replace(/$/gm, "<br>");
+		text2 = text.replace(/\B'/g, '"')
+		let boolChange = true;
+		document.querySelector(".change-text").innerHTML = text;
+		document.querySelector(".change-btn").addEventListener("click", e => {
+			if (boolChange) {
+				document.querySelector(".change-text").innerHTML = text2;
+				boolChange = false;
+			} else {
+				document.querySelector(".change-text").innerHTML = text;
+				boolChange = true;
+			}
+		})
+		// Валидация форм
+		class ValidateForm {
+			errorForm = document.querySelector(".error");
+			nameForm = document.querySelector(".name");
+			telForm = document.querySelector(".tel");
+			emailForm = document.querySelector(".email");
+			constructor() {
+				this.validate();
+			}
+			validate() {
+				document.querySelector(".submit").addEventListener("click", () => {
+					if (!/([а-яА-ЯёЁ]+|\D\w+)/gi.test(this.nameForm.value)) {
+						this.nameForm.style.border = "solid red";
+						this.errorForm.style.display = "inline";
+						this.errorHide(this.nameForm);
+					}
+					if (!/\w+[.-]?\w+@\w+\.\w+/g.test(this.emailForm.value)) {
+						this.emailForm.style.border = "solid red";
+						this.errorForm.style.display = "inline";
+						this.errorHide(this.emailForm);
+					}
+					if (!/\+7\(\d{3}\)\d{3}\-\d{4}/g.test(this.telForm.value)) {
+						this.telForm.style.border = "solid red";
+						this.errorForm.style.display = "inline";
+						this.errorHide(this.telForm);
+					}
+				})
+			}
+			errorHide(form) {
+				setTimeout(() => {
+					form.style.border = ""
+					this.errorForm.style.display = "";
+				}, 3e3)
+			}
+		}
+		const valid = new ValidateForm();
+	</script>
+</body>
+
+</html>
