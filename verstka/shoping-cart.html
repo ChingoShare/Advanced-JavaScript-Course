@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>shopping cart</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<header class="container mg-top-25">
+		<div class="left">
+			<div class="menu-block menu-block-1">
+					<a href="#"><img src="img/group_2_18.png" alt="img"></a>
+			</div>
+			<div class="menu-block menu-block-2">
+					<a href="#" class="brand">bran<span class="red">d</span></a>
+			</div>
+			<div class="menu-block menu-block-3">
+				<form class="search-blocks">
+					<input class="search-block search-1" type="button" value="Browse ▾">
+					<input class="search-block search-2" type="text" name="search" placeholder="Search for Item...">
+					<input class="search-block search-3" type="submit" value="🔍">
+				</form>
+			</div>
+		</div>
+		<div class="right">
+			<div class="menu-block menu-block-4">
+				<a href="#"><img src="img/forma_1_1113.png" alt="img"></a>
+			</div>
+			<div class="menu-block menu-block-5">
+				<input class="my-account search-block" type="button" value="My Account ▾">
+			</div>
+		</div>
+	</header>
+	<main>
+		<nav class="content-menu">
+			<a class="menu-link" href="#">Home</a>
+			<a class="menu-link" href="#">Man</a>
+			<a class="menu-link" href="#">Women</a>
+			<a class="menu-link" href="#">Kids</a>
+			<a class="menu-link" href="#">Accoseriese</a>
+			<a class="menu-link" href="#">Featured</a>
+			<a class="menu-link" href="#">Hot&nbsp;Deals</a>
+		</nav>
+		<div class="new-arrivals">
+			<div class="container y-center">
+				<h1 class="tittle">New Arrivals</h1>
+				<p class="right">
+					<a class="arrivals-link" href="index.html">Home/</a>
+					<a class="arrivals-link" href="#">Men/</a>
+					<a class="arrivals-link arrivals-link-active" href="#">New Arrivals</a>
+				</p>
+			</div>
+		</div>
+		<article class="shopping-content container">
+			<p class="product-tittle zero">Product Details</p>
+			<p class="product-tittle zero">unite Price</p>
+			<p class="product-tittle zero">Quantity</p>
+			<p class="product-tittle zero">shipping</p>
+			<p class="product-tittle zero">Subtotal</p>
+			<p class="product-tittle zero">Action</p>
+
+			<div class="the-hr"></div>
+
+			<section class="imgandtext">
+				<img height="115" width="100" src="img/newproduct1.jpg" alt="img">
+				<div>
+				<p class="product-tittle zero">Mango People T-shirt</p>
+				<p class="shopping-font zero">Color: <span class="shopping-font-2">Red</span></p>
+				<p class="shopping-font zero">Size: <span class="shopping-font-2">Xll</span></p>
+				</div>
+			</section>
+			<p class="shopping-font">$150</p>
+			<input class="shopping-font quantity-input zero" type="text" value="2">
+			<p class="shopping-font">FREE</p>
+			<p class="shopping-font">$300</p>
+			<p class="shopping-font"><i class="fa fa-times-circle" aria-hidden="true"></i></p>
+
+			<div class="the-hr"></div>
+
+			<section class="imgandtext">
+				<img height="115" width="100" src="img/newproduct2.jpg" alt="img">
+				<div>
+				<p class="product-tittle zero">Mango People T-shirt</p>
+				<p class="shopping-font zero">Color: <span class="shopping-font-2">Red</span></p>
+				<p class="shopping-font zero">Size: <span class="shopping-font-2">Xll</span></p>
+				</div>
+			</section>
+			<p class="shopping-font">$150</p>
+			<input class="shopping-font quantity-input zero" type="text" value="2">
+			<p class="shopping-font">FREE</p>
+			<p class="shopping-font">$300</p>
+			<p class="shopping-font"><i class="fa fa-times-circle" aria-hidden="true"></i></p>
+
+			<div class="the-hr"></div>
+
+			<section class="imgandtext">
+				<img height="115" width="100" src="img/newproduct8.jpg" alt="img">
+				<div>
+				<p class="product-tittle zero">Mango People T-shirt</p>
+				<p class="shopping-font zero">Color: <span class="shopping-font-2">Red</span></p>
+				<p class="shopping-font zero">Size: <span class="shopping-font-2">Xll</span></p>
+				</div>
+			</section>
+			<p class="shopping-font">$150</p>
+			<input class="shopping-font quantity-input zero" type="text" value="2">
+			<p class="shopping-font">FREE</p>
+			<p class="shopping-font">$300</p>
+			<p class="shopping-font"><i class="fa fa-times-circle" aria-hidden="true"></i></p>
+
+			<div class="the-hr"></div>
+
+			<section class="shopping-buttons">
+				<a href="#" class="shopping-button">cLEAR SHOPPING CART</a>
+				<a href="#" class="shopping-button">cONTINUE sHOPPING</a>
+			</section>
+		</article>
+
+		<article class="form-submits container">
+			<form class="shipping-adress" action="#" method="post" enctype="multipart/form-data">
+				<p class="shopping-title">Shipping Adress</p>
+				<input class="shipping-input" list="cities" placeholder="Bangladesh">
+				<datalist id="cities">
+					<option value="City">
+					<option value="Town">
+					<option value="Land">
+					<option value="Place">
+				</datalist>
+				<input class="shipping-input" type="text" placeholder="State">
+				<input class="shipping-input" type="text" placeholder="Postcode / Zip">
+				<button class="shopping-submit" type="submit">get a quote</button>
+			</form>
+			<form class="shipping-adress" action="#" method="post" enctype="multipart/form-data">
+				<p class="shopping-title">coupon discount</p>
+				<p style="font-size: 14px">Enter your coupon code if you have one</p>
+				<input class="shipping-input" type="text" placeholder="State">
+				<button class="shopping-submit" type="submit">Apply coupon</button>
+				<div></div><div></div>
+			</form>
+			<section class="cheque">
+				<p style="font-size: 11px;">SUB TOTAL &#160;&#160;$900</p>
+				<p class="shopping-title">GRAND TOTAL &#160;&#160;<span class="red">$900</span></p>
+				<div style="width: 90%;background-color: #e2e2e2;height: 1px;"></div>
+				<button class="cheque-button">proceed to checkout</button>
+			</section>
+		</article>
+	</main>
+	<footer>
+		<div class="down-banners">
+			<div class="contrast"></div>
+
+			<div class="down-banners-cont container">
+			<div class="left-banner">
+				<img class="left-banner-img" height="80" src="img/face.png" alt="img">
+				<div class="banner-left-side">
+					<p class="quote">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
+					<p class="texttt">Bin Burhan<br><span class="texttt2">Dhaka, Bd</span></p>
+					<div class="buttons">
+						<button class="button-banner" ></button>
+						<button class="button-banner" ></button>
+						<button class="button-banner" ></button>
+					</div>
+				</div>
+			</div>
+			<div class="right-banner">
+				<p class="tittle-right-down">Subscribe<br><span class="tittle-right-down-2">FOR OUR NEWLETTER AND PROMOTION</span></p>
+				<form class="right-banner-form" action="#">
+					<input type="text" class="right-banner-input" placeholder="Enter Your Email">
+					<button class="right-banner-button" type="submit">Subscribe</button>
+				</form>
+			</div>
+		</div>
+		</div>
+		<div class="footer-nav container">
+			<div class="footer-nav-1 footer-nav-block">
+				<div class="logotype"><a href="#"><img src="img/group_2_18.png" alt="img"></a>
+				<a href="#" class="brand">bran<span class="red">d</span></a></div>
+				<p class="footer-nav-1-text">Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships. <br><br>
+				Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize superior initiatives for wireless technologies. Dynamically optimize. <br><br> </p>
+			</div>
+
+			<div class="footer-nav-block">
+				<h3 class="nav-block-tittle">COMPANY</h3>
+				<a href="#" class="nav-block-link">Home</a>
+				<a href="#" class="nav-block-link">Shop</a>
+				<a href="#" class="nav-block-link">About</a>
+				<a href="#" class="nav-block-link">How It Works</a>
+				<a href="#" class="nav-block-link">Contact</a>
+			</div>
+
+			<div class="footer-nav-block">
+				<h3 class="nav-block-tittle">INFORMATION</h3>
+				<a href="#" class="nav-block-link">Tearms & Condition</a>
+				<a href="#" class="nav-block-link">Privacy Policy</a>
+				<a href="#" class="nav-block-link">How to Buy</a>
+				<a href="#" class="nav-block-link">How to Sell</a>
+				<a href="#" class="nav-block-link">Promotion</a>
+			</div>
+			<div class="footer-nav-block">
+				<h3 class="nav-block-tittle">SHOP CATEGORY</h3>
+				<a href="#" class="nav-block-link">Men</a>
+				<a href="#" class="nav-block-link">Women</a>
+				<a href="#" class="nav-block-link">Child</a>
+				<a href="#" class="nav-block-link">Apparel</a>
+				<a href="#" class="nav-block-link">Brows All</a>
+			</div>
+		</div>
+		<div class="down-footer">
+			<section class="container2 container">
+				<p class="copyright">© 2017 Brand All Rights Reserved</p>
+				<div class="social-networks">
+					<a href="#" class="social-network"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href="#" class="social-network"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a href="#" class="social-network"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+					<a href="#" class="social-network"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+					<a href="#" class="social-network"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+				</div>
+			</section>
+		</div>
+	</footer>
+</body>
+</html>
